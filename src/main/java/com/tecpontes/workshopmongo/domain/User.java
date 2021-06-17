@@ -17,7 +17,7 @@ public class User implements Serializable {
 	private String name;
 	private String email;
 	
-	@DBRef(lazy = true) // não carregar automaticamente os dados(posts) de todos os usuários
+	@DBRef(lazy = true) // Lazy: Carregamento tardio. Não carregar automaticamente os dados(posts) de todos os usuários
 	private List<Post> posts = new ArrayList<>();
 	
 	private User() {
